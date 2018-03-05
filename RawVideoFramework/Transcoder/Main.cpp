@@ -86,14 +86,14 @@ PIXEL_DATA_TYPE stopdt(const string data_type) {
 int main(int argc, char* argv[]) {
   // Specify valid command line arguments and program usage
   ap::parser p(argc, argv);
-  p.add("-i", "--input",            "Input raw video file name",                     ap::mode::REQUIRED);
-  p.add("-o", "--output",           "Output raw video file name",                    ap::mode::REQUIRED);
-  p.add("-f", "--input_format",     "Input raw video data format",                   ap::mode::REQUIRED);
-  p.add("-c", "--output_format",    "Desired output raw video data format ",         ap::mode::REQUIRED);
-  p.add("-l", "--height",           "Height of each video frame",                    ap::mode::REQUIRED);
-  p.add("-w", "--width",            "Width of each video frame",                     ap::mode::REQUIRED);
-  p.add("-d", "--input_data_type",  "Input pixel data type (default int8)",          ap::mode::OPTIONAL);
-  p.add("-s", "--output_data_type", "Desired output pixel data type (default int8)", ap::mode::OPTIONAL);
+  p.add("-i", "--input",            "Input raw video file name",             ap::mode::REQUIRED);
+  p.add("-o", "--output",           "Output raw video file name",            ap::mode::REQUIRED);
+  p.add("-f", "--input_format",     "Input raw video data format",           ap::mode::REQUIRED);
+  p.add("-c", "--output_format",    "Output raw video data format",          ap::mode::REQUIRED);
+  p.add("-l", "--height",           "Height of each video frame",            ap::mode::REQUIRED);
+  p.add("-w", "--width",            "Width of each video frame",             ap::mode::REQUIRED);
+  p.add("-d", "--input_data_type",  "Input pixel data type (default int8)",  ap::mode::OPTIONAL);
+  p.add("-s", "--output_data_type", "Output pixel data type (default int8)", ap::mode::OPTIONAL);
 
   // Parse command line arguments
   auto args = p.parse();
